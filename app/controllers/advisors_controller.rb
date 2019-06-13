@@ -13,7 +13,7 @@ class AdvisorsController < ApplicationController
   end
 
   def deleteAdvisor
-    render json: Advisor.delete(params["id"], params["date"])
+    render json: Advisor.delete(params["id"])
   end
 
 end
