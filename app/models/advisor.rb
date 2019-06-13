@@ -38,4 +38,9 @@ class Advisor
     }
   end
 
+  def self.deleteAdvisor(id)
+    results = DB.exec("DELETE FROM advisors WHERE id=#{id};")
+    return {"deleted" => true}
+  end
+
 end
