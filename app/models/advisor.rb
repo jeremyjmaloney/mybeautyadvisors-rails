@@ -16,4 +16,12 @@ class Advisor
     end
   end
 
+  def self.showAdvisor(id)
+    results = DB.exec("SELECT * FROM advisors WHERE id=#{id}")
+    return {
+      "id" => results.first["id"].to_i,
+      "name" => results.first["name"]
+    }
+  end
+
 end
