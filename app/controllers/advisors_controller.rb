@@ -1,19 +1,19 @@
 class AdvisorsController < ApplicationController
 
   def allAdvisors
-    render json: Advisor.all
+    render json: Advisor.allAdvisors
   end
 
   def showAdvisor
-    render json: Advisor.find(params["id"])
+    render json: Advisor.showAdvisor(params["id"])
   end
 
   def createAdvisor
-    render json: Advisor.create(params["advisor"])
+    render json: Advisor.createAdvisor(params["advisor"])
   end
 
   def deleteAdvisor
-    render json: Advisor.delete(params["id"])
+    render json: Advisor.deleteAdvisor(params["id"])
   end
 
 end

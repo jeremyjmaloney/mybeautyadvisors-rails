@@ -1,19 +1,19 @@
 class WeeksController < ApplicationController
 
   def allWeeks
-    render json: Week.all
+    render json: Week.allWeeks
   end
 
   def showWeek
-    render json: Week.find(params["id"])
+    render json: Week.showWeek(params["id"])
   end
 
   def createWeek
-    render json: Week.create(params["week"])
+    render json: Week.createWeek(params["week"])
   end
 
   def deleteWeek
-    render json: Week.delete(params["id"], params["date"])
+    render json: Week.deleteWeek(params["id"], params["date"])
   end
 
 end
