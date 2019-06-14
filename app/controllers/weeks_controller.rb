@@ -13,7 +13,7 @@ class WeeksController < ApplicationController
   end
 
   def deleteWeek
-    render json: Week.deleteWeek(params["id"], params["date"])
+    render json: Week.deleteWeek(params["id"], params["weekId"])
   end
 
 end
