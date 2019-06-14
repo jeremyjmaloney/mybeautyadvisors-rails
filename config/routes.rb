@@ -8,9 +8,9 @@ Rails.application.routes.draw do
 
   delete '/stores/:id', to:'stores#deleteStore'
 
-  get '/advisors', to:'advisors#allAdvisors'
+  get '/advisors/:storeNum', to:'advisors#allAdvisors'
 
-  get '/advisors/:id', to:'advisors#showAdvisor'
+  get '/advisors/:storeNum/:id', to:'advisors#showAdvisor'
 
   post '/advisors', to:'advisors#createAdvisor'
 

@@ -1,11 +1,11 @@
 class AdvisorsController < ApplicationController
 
   def allAdvisors
-    render json: Advisor.allAdvisors
+    render json: Advisor.allAdvisors(params["storeNum"])
   end
 
   def showAdvisor
-    render json: Advisor.showAdvisor(params["id"])
+    render json: Advisor.showAdvisor(params["storeNum"], params["id"])
   end
 
   def createAdvisor
