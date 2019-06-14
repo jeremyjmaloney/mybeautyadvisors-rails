@@ -16,12 +16,12 @@ Rails.application.routes.draw do
 
   delete '/advisors/:id', to:'advisors#deleteAdvisor'
 
-  get '/weeks/:id', to:'weeks#showWeeks'
+  get '/weeks/:advisorId', to:'weeks#allWeeks'
 
-  get '/weeks/:id/:weekId', to:'weeks#findWeek'
+  get '/weeks/:advisorId/:id', to:'weeks#showWeek'
 
   post '/weeks', to:'weeks#createWeek'
 
-  delete '/weeks/:id/:weekId', to:'weeks#deleteWeek'
+  delete '/weeks/:id', to:'weeks#deleteWeek'
 
 end
